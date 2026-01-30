@@ -23,6 +23,11 @@
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
+      <!-- Resume PDF link -->
+      {% if author.resume %}
+        <li><a href="{{ author.resume }}"><i class="fas fa-fw fa-file-pdf icon-pad-right" aria-hidden="true"></i>Resume (PDF)</a></li>
+      {% endif %}
+      
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
         <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
